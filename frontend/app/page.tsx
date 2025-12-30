@@ -42,7 +42,7 @@ export default function Home() {
       const historyToSend = messages.map((m) => ({ role: m.role, content: m.content }));
 
       // 3. Send data to YOUR Python backend
-      const res = await axios.post("http://127.0.0.1:8000/chat", {
+      const res = await axios.post("https://perplexity-mini.onrender.com/chat", {
         query: query, 
         history: historyToSend, 
       });
